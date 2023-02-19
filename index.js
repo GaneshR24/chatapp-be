@@ -13,7 +13,7 @@ app.use(
     limit: "50mb",
   })
 );
-app.use(cors("http://localhost:3000"));
+app.use(cors({origin: "http://localhost:3000"}));
 db();
 
 const server = require("http").createServer(app);
