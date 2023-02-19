@@ -13,14 +13,14 @@ app.use(
     limit: "50mb",
   })
 );
-app.use(cors({origin: "http://localhost:3000"}));
+app.use(cors({origin: "https://wecalltext-chatapp.netlify.app"}));
 db();
 
 const server = require("http").createServer(app);
 
 const io = require("socket.io")(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://wecalltext-chatapp.netlify.app",
     methods: ["GET", "POST"],
   },
 });
